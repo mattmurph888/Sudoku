@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Matt's Sudoku</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+    <div class="title">SUDOKU</div>
+
+
+
+		<div class="buttons">
+			<button class="level" onclick=setPuzzle(20)>Easy</button>
+      <button class="level" onclick=setPuzzle(35)>Medium</button>
+      <button class="level" onclick=setPuzzle(50)>Hard</button>
+		</div>
+
+		<div id="puzzle-container"></div>
+
+    <div id="button-container"></div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

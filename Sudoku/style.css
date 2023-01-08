@@ -1,0 +1,116 @@
+html,
+body {
+	height: 100vh;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	--puzzle-size: max(min(50vh, 50vw), 185px);
+	--border-size: 1px;
+}
+
+.title {
+	text-align: center;
+	width: var(--puzzle-size);
+	font-size: calc(var(--puzzle-size) * 0.24);
+}
+
+.buttons {
+	width: var(--puzzle-size);
+	margin-bottom: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+	border-bottom: calc(var(--border-size) * 2) solid black;
+}
+
+.level {
+	flex: 1;
+	margin: calc(var(--border-size) * 2);
+}
+
+#puzzle-container {
+	width: var(--puzzle-size);
+	height: var(--puzzle-size);
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+
+.box {
+	display: flex;
+	border: var(--border-size) solid black;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-row2,
+.box-row5,
+.box-row8 {
+	border-bottom: calc(var(--border-size) * 2) solid black;
+}
+
+.box-row0 {
+	border-top: calc(var(--border-size) * 2) solid black;
+}
+
+.box-col2,
+.box-col5,
+.box-col8 {
+	border-right: calc(var(--border-size) * 2) solid black;
+}
+
+.box-col0 {
+	border-left: calc(var(--border-size) * 2) solid black;
+}
+
+#button-container {
+	width: calc(var(--puzzle-size));
+	height: calc(50vh / 9);
+	margin-top: 2em;
+	padding-top: 1em;
+	border-top: calc(var(--border-size) * 2) solid black;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.number-button {
+	--border-width: calc(var(--border-size) * 2);
+	--margin-width: var(--border-size);
+	display: flex;
+	border: var(--border-width) solid black;
+	border-radius: 5px;
+	flex-basis: calc(
+		(1 / 9) * 100% - ((var(--border-width) * 2) + var(--margin-width))
+	);
+	aspect-ratio: 1/1;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: var(--margin-width);
+}
+
+#number-button0,
+#empty-space,
+#error-container {
+	flex: 1;
+	aspect-ratio: 3/1;
+}
+
+#empty-space,
+#error-container {
+	border-color: rgba(0, 0, 0, 0);
+	font-size: calc(var(--puzzle-size) * 0.08);
+}
