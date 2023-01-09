@@ -292,6 +292,7 @@ function setNewPuzzle(board) {
 			let box = document.getElementById(`box${row}${col}`);
 			box.style.color = 'black';
 			box.style.fontWeight = 'normal';
+			box.style.fontSize = '1em';
 			if (board[row][col] == 0) {
 				box.innerHTML = ' ';
 			} else {

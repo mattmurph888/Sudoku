@@ -8,19 +8,22 @@
 	</head>
 
 	<body>
-    <div class="title">SUDOKU</div>
+    <div class="main-container">
 
+      <div class="title">SUDOKU</div>
 
+      <div class="buttons">
+        <button class="level" onclick=setPuzzle(20)>Easy</button>
+        <button class="level" onclick=setPuzzle(35)>Medium</button>
+        <button class="level" onclick=setPuzzle(50)>Hard</button>
+      </div>
 
-		<div class="buttons">
-			<button class="level" onclick=setPuzzle(20)>Easy</button>
-      <button class="level" onclick=setPuzzle(35)>Medium</button>
-      <button class="level" onclick=setPuzzle(50)>Hard</button>
-		</div>
+      <div id="puzzle-container"></div>
 
-		<div id="puzzle-container"></div>
+      <div id="button-container"></div>
 
-    <div id="button-container"></div>
+    </div>
+    
 
 		<script src="script.js"></script>
 	</body>

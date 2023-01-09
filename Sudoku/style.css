@@ -6,8 +6,18 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	--puzzle-size: max(min(50vh, 50vw), 185px);
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 90vh;
+	width: 50vw;
+	aspect-ratio: 1/1;
+	--puzzle-size: max(min(45vh, 50vw), 185px);
 	--border-size: 1px;
+	padding-top: 0px;
 }
 
 .title {
@@ -18,14 +28,14 @@ body {
 
 .buttons {
 	width: var(--puzzle-size);
-	margin-bottom: 5px;
+	margin-bottom: 4vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 1em;
-	margin-bottom: 2em;
-	padding-bottom: 1em;
+	margin-top: 2vh;
+	margin-bottom: 4vh;
+	padding-bottom: 2vh;
 	border-bottom: calc(var(--border-size) * 2) solid black;
 }
 
@@ -77,9 +87,9 @@ body {
 
 #button-container {
 	width: calc(var(--puzzle-size));
-	height: calc(50vh / 9);
-	margin-top: 2em;
-	padding-top: 1em;
+	height: calc(var(--puzzle-size) / 9);
+	margin-top: 4vh;
+	padding-top: 2vh;
 	border-top: calc(var(--border-size) * 2) solid black;
 	display: flex;
 	flex-wrap: wrap;
